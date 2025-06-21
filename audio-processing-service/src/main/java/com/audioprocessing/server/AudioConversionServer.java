@@ -40,14 +40,15 @@ public class AudioConversionServer {
   }
 
   public static void main(String[] args) throws Exception {
+    System.setProperty("java.net.preferIPv4Stack", "true");
     AudioConversionServer server = new AudioConversionServer();
     server.start();
     server.blockUntilShutdown();
   }
 
   private void start() throws Exception {
-    server = NettyServerBuilder
-              .forAddress(new InetSocketAddress("0.0.0.0", PORT))
+    server = ServerBuilder
+              .forPort(PORT)
               .addService(new AudioConversionServiceImpl())
               .build()
               .start();

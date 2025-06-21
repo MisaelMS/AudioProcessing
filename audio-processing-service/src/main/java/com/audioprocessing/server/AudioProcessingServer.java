@@ -42,6 +42,7 @@ public class AudioProcessingServer {
   }
 
   public static void main(String[] args) throws Exception {
+    System.setProperty("java.net.preferIPv4Stack", "true");
     AudioProcessingServer server = new AudioProcessingServer();
     server.start();
     server.blockUntilShutdown();
@@ -52,8 +53,8 @@ public class AudioProcessingServer {
     Files.createDirectories(Paths.get(AUDIO_STORAGE_DIR));
     Files.createDirectories(Paths.get(PROCESSED_STORAGE_DIR));
 
-    server = NettyServerBuilder
-            .forAddress(new InetSocketAddress("0.0.0.0", PORT))
+    server = ServerBuilder
+            .forPort(PORT)
             .addService(new AudioProcessingServer.AudioProcessingServiceImpl())
             .build()
             .start();

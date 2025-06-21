@@ -15,14 +15,15 @@ public class AudioAnalysisServer {
   private Server server;
 
   public static void main(String[] args) throws Exception {
+    System.setProperty("java.net.preferIPv4Stack", "true");
     AudioAnalysisServer server = new AudioAnalysisServer();
     server.start();
     server.blockUntilShutdown();
   }
 
   private void start() throws Exception {
-    server = NettyServerBuilder
-            .forAddress(new InetSocketAddress("0.0.0.0", PORT))
+    server = ServerBuilder
+            .forPort(PORT)
             .addService(new AudioAnalysisServiceImpl())
             .build()
             .start();
