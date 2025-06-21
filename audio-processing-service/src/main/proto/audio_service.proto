@@ -1,0 +1,97 @@
+// audio_service.proto
+syntax="proto3";
+
+option java_multiple_files=true;option java_package="com.audioprocessing.grpc";option java_outer_classname="AudioServiceProto";
+
+package audioprocessing;
+
+// Serviço principal de processamento de áudio
+service AudioProcessingService{
+// Upload de arquivo de áudio
+rpc UploadAudio(stream AudioChunk)returns(AudioUploadResponse);
+
+// Download de arquivo de áudio
+rpc DownloadAudio(AudioDownloadRequest)returns(stream AudioChunk);
+
+// Processamento de áudio (normalização, equalização, etc.)
+rpc ProcessAudio(AudioProcessRequest)returns(AudioProcessResponse);
+
+// Obter informações sobre um arquivo de áudio
+rpc GetAudioInfo(AudioInfoRequest)returns(AudioInfoResponse);
+
+// Listar arquivos disponíveis
+rpc ListAudioFiles(ListAudioFilesRequest)returns(ListAudioFilesResponse);}
+
+// Serviço de conversão de formatos
+service AudioConversionService{
+// Converter formato de áudio
+rpc ConvertAudioFormat(AudioConversionRequest)returns(AudioConversionResponse);
+
+// Converter para múltiplos formatos
+rpc BatchConvertAudio(BatchConversionRequest)returns(stream AudioConversionResponse);}
+
+// Serviço de análise de áudio
+service AudioAnalysisService{
+// Analisar frequências do áudio
+rpc AnalyzeFrequency(AudioAnalysisRequest)returns(AudioAnalysisResponse);
+
+// Detectar silêncio
+rpc DetectSilence(AudioAnalysisRequest)returns(SilenceDetectionResponse);
+
+// Extrair características do áudio
+rpc ExtractFeatures(AudioAnalysisRequest)returns(AudioFeaturesResponse);}
+
+// Mensagens para transferência de arquivos
+message AudioChunk{bytes data=1;string filename=2;int64 chunk_number=3;int64 total_chunks=4;string content_type=5;}
+
+message AudioUploadResponse{string file_id=1;string filename=2;int64 size=3;bool success=4;string message=5;}
+
+message AudioDownloadRequest{string file_id=1;}
+
+// Mensagens para processamento
+message AudioProcessRequest{string file_id=1;ProcessingOptions options=2;}
+
+message ProcessingOptions{bool normalize=1;bool apply_equalizer=2;EqualizerSettings equalizer=3;bool apply_noise_reduction=4;double volume_adjustment=5;}
+
+message EqualizerSettings{double bass=1;double mid=2;double treble=3;}
+
+message AudioProcessResponse{string processed_file_id=1;bool success=2;string message=3;ProcessingStats stats=4;}
+
+message ProcessingStats{double processing_time_seconds=1;int64 original_size=2;int64 processed_size=3;}
+
+// Mensagens para informações de áudio
+message AudioInfoRequest{string file_id=1;}
+
+message AudioInfoResponse{string file_id=1;string filename=2;string format=3;double duration_seconds=4;int32 sample_rate=5;int32 channels=6;int32 bit_depth=7;int64 file_size=8;string created_at=9;}
+
+message ListAudioFilesRequest{int32 page=1;int32 page_size=2;string filter=3;}
+
+message ListAudioFilesResponse{repeated AudioInfoResponse files=1;int32 total_count=2;int32 current_page=3;}
+
+// Mensagens para conversão
+message AudioConversionRequest{string file_id=1;string target_format=2;ConversionOptions options=3;}
+
+message ConversionOptions{int32 sample_rate=1;int32 channels=2;int32 bit_depth=3;int32 quality=4;}
+
+message AudioConversionResponse{string converted_file_id=1;string original_format=2;string target_format=3;bool success=4;string message=5;}
+
+message BatchConversionRequest{repeated string file_ids=1;repeated string target_formats=2;ConversionOptions options=3;}
+
+// Mensagens para análise
+message AudioAnalysisRequest{string file_id=1;AnalysisOptions options=2;}
+
+message AnalysisOptions{bool include_spectrum=1;bool include_waveform=2;double analysis_window_seconds=3;}
+
+message AudioAnalysisResponse{string file_id=1;FrequencySpectrum spectrum=2;repeated double waveform_samples=3;AudioStatistics statistics=4;}
+
+message FrequencySpectrum{repeated double frequencies=1;repeated double magnitudes=2;double peak_frequency=3;}
+
+message AudioStatistics{double rms_level=1;double peak_level=2;double dynamic_range=3;double signal_to_noise_ratio=4;}
+
+message SilenceDetectionResponse{string file_id=1;repeated SilenceSegment silence_segments=2;double total_silence_duration=3;double silence_percentage=4;}
+
+message SilenceSegment{double start_time=1;double end_time=2;double duration=3;}
+
+message AudioFeaturesResponse{string file_id=1;double tempo=2;string key=3;double loudness=4;repeated double mfcc_coefficients=5;SpectralFeatures spectral_features=6;}
+
+message SpectralFeatures{double spectral_centroid=1;double spectral_bandwidth=2;double spectral_rolloff=3;double zero_crossing_rate=4;}
