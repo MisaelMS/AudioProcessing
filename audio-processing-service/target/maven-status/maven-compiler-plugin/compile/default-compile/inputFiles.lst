@@ -1,58 +1,59 @@
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioStatistics.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioDownloadRequest.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioStatisticsOrBuilder.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioFeaturesResponse.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioProcessRequest.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioAnalysisResponse.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\src\main\java\com\audioprocessing\server\AudioConversionServer.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioInfoRequest.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioAnalysisResponseOrBuilder.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\ListAudioFilesRequestOrBuilder.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioInfoResponse.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\SilenceDetectionResponse.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\ProcessingOptions.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AnalysisOptions.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioProcessResponseOrBuilder.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\ListAudioFilesRequest.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\BatchConversionRequestOrBuilder.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\SilenceSegment.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\src\main\java\com\audioprocessing\server\AudioProcessingServer.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioChunkOrBuilder.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioDownloadRequestOrBuilder.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\EqualizerSettings.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\src\main\java\com\audioprocessing\client\AudioProcessingClient.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioFeaturesResponseOrBuilder.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioUploadResponseOrBuilder.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\FrequencySpectrum.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\SpectralFeatures.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\ConversionOptionsOrBuilder.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\FrequencySpectrumOrBuilder.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\SilenceDetectionResponseOrBuilder.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AnalysisOptionsOrBuilder.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\SpectralFeaturesOrBuilder.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\grpc-java\com\audioprocessing\grpc\AudioAnalysisServiceGrpc.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\BatchConversionRequest.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioInfoRequestOrBuilder.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioConversionRequestOrBuilder.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\EqualizerSettingsOrBuilder.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\ListAudioFilesResponse.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\grpc-java\com\audioprocessing\grpc\AudioConversionServiceGrpc.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioUploadResponse.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioAnalysisRequestOrBuilder.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\ConversionOptions.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioProcessResponse.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioProcessRequestOrBuilder.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\src\main\java\com\audioprocessing\server\AudioAnalysisServer.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioChunk.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioServiceProto.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\ProcessingStatsOrBuilder.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioAnalysisRequest.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioInfoResponseOrBuilder.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\ProcessingStats.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioConversionRequest.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioConversionResponseOrBuilder.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\ListAudioFilesResponseOrBuilder.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\SilenceSegmentOrBuilder.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioConversionResponse.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\grpc-java\com\audioprocessing\grpc\AudioProcessingServiceGrpc.java
-C:\Users\User\Documents\Unesc\7_Fase\ProgComp\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\ProcessingOptionsOrBuilder.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\SilenceSegmentOrBuilder.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\src\main\java\com\audioprocessing\server\AudioProcessingServer.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\BatchConversionRequestOrBuilder.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\EqualizerSettingsOrBuilder.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioFeaturesResponse.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\FrequencySpectrumOrBuilder.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioStatisticsOrBuilder.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\SpectralFeaturesOrBuilder.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioChunk.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioProcessResponse.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioInfoResponseOrBuilder.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioAnalysisResponseOrBuilder.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\SilenceSegment.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\ProcessingStatsOrBuilder.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioUploadResponseOrBuilder.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AnalysisOptionsOrBuilder.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\FrequencySpectrum.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\SpectralFeatures.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\src\main\java\com\audioprocessing\client\AudioProcessorCaller.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioConversionResponseOrBuilder.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\grpc-java\com\audioprocessing\grpc\AudioConversionServiceGrpc.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioFeaturesResponseOrBuilder.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioInfoResponse.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioChunkOrBuilder.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioAnalysisRequest.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioUploadResponse.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\ConversionOptions.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioAnalysisResponse.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioServiceProto.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\SilenceDetectionResponse.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioProcessResponseOrBuilder.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\SilenceDetectionResponseOrBuilder.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\ListAudioFilesResponse.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\ProcessingOptions.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\ConversionOptionsOrBuilder.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\ProcessingOptionsOrBuilder.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\BatchConversionRequest.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioProcessRequest.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioConversionRequestOrBuilder.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\src\main\java\com\audioprocessing\server\AudioConversionServer.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioConversionRequest.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\grpc-java\com\audioprocessing\grpc\AudioAnalysisServiceGrpc.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AnalysisOptions.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioDownloadRequest.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\EqualizerSettings.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioDownloadRequestOrBuilder.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioStatistics.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\ListAudioFilesRequestOrBuilder.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\src\main\java\com\audioprocessing\server\AudioAnalysisServer.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioProcessRequestOrBuilder.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\src\main\java\com\audioprocessing\client\AudioProcessingClient.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioConversionResponse.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioAnalysisRequestOrBuilder.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\ProcessingStats.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\ListAudioFilesRequest.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\ListAudioFilesResponseOrBuilder.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioInfoRequest.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\java\com\audioprocessing\grpc\AudioInfoRequestOrBuilder.java
+C:\Users\User\Documents\Unesc\7_Fase\ProgComp\Nova pasta\AudioProcessing\audio-processing-service\target\generated-sources\protobuf\grpc-java\com\audioprocessing\grpc\AudioProcessingServiceGrpc.java

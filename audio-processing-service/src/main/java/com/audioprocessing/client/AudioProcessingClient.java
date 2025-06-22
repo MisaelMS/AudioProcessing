@@ -98,7 +98,7 @@ public class AudioProcessingClient {
     System.out.println("Iniciando upload de: " + filename + " (" + fileData.length + " bytes)");
 
     StreamObserver<AudioChunk> requestObserver = processingStub
-            .withDeadlineAfter(120, TimeUnit.SECONDS) // Timeout aumentado para 120 segundos
+            .withDeadlineAfter(120, TimeUnit.SECONDS)
             .uploadAudio(new StreamObserver<AudioUploadResponse>() {
               @Override
               public void onNext(AudioUploadResponse response) {
@@ -133,7 +133,7 @@ public class AudioProcessingClient {
 
     try {
       // Enviar arquivo em chunks menores
-      int chunkSize = 32 * 1024; // 32KB por chunk (reduzido ainda mais)
+      int chunkSize = 32 * 1024; // 32KB por chunk
       int totalChunks = (int) Math.ceil((double) fileData.length / chunkSize);
 
       System.out.println("Enviando " + totalChunks + " chunks de " + chunkSize + " bytes cada");
@@ -159,14 +159,12 @@ public class AudioProcessingClient {
         requestObserver.onNext(chunk);
         System.out.println("Enviado chunk " + (i + 1) + "/" + totalChunks);
 
-        // Pequena pausa entre chunks para evitar sobrecarga
-        Thread.sleep(50); // Aumentado para 50ms
+        Thread.sleep(50);
       }
 
       System.out.println("Finalizando envio...");
       requestObserver.onCompleted();
 
-      // Aguardar resposta com timeout maior
       boolean finished = latch.await(150, TimeUnit.SECONDS);
 
       if (!finished) {
@@ -189,12 +187,10 @@ public class AudioProcessingClient {
 
     } catch (Exception e) {
       System.err.println("Erro durante o upload: " + e.getMessage());
-      // Não chamar onError aqui se já houve shutdown
       if (!isShutdown.get()) {
         try {
           requestObserver.onError(e);
         } catch (Exception ignored) {
-          // Ignora erro ao tentar reportar erro
         }
       }
       throw e;
@@ -214,7 +210,6 @@ public class AudioProcessingClient {
       System.out.println("\n1. UPLOAD DO ARQUIVO");
       String fileId = uploadAudio(filePath);
 
-      // Pequena pausa após upload
       Thread.sleep(1000);
 
       // 2. Obter informações do arquivo
@@ -235,12 +230,11 @@ public class AudioProcessingClient {
       // 3. Processamento de áudio
       System.out.println("\n3. PROCESSAMENTO DE ÁUDIO");
 
-      // Primeiro, vamos tentar um processamento mais simples
       ProcessingOptions simpleOptions = ProcessingOptions.newBuilder()
               .setNormalize(true)
-              .setApplyEqualizer(false) // Desabilitar equalizer primeiro
-              .setApplyNoiseReduction(false) // Desabilitar noise reduction primeiro
-              .setVolumeAdjustment(0.0) // Sem ajuste de volume
+              .setApplyEqualizer(false)
+              .setApplyNoiseReduction(false)
+              .setVolumeAdjustment(0.0)
               .build();
 
       AudioProcessRequest processRequest = AudioProcessRequest.newBuilder()
@@ -265,7 +259,6 @@ public class AudioProcessingClient {
         System.err.println("Processamento simples falhou: " + e.getMessage());
         System.out.println("Tentando processamento sem nenhuma opção...");
 
-        // Tentar sem nenhuma opção de processamento
         ProcessingOptions noOptions = ProcessingOptions.newBuilder()
                 .setNormalize(false)
                 .setApplyEqualizer(false)
@@ -291,7 +284,6 @@ public class AudioProcessingClient {
           System.err.println("Erro detalhado: " + e2.getMessage());
           System.err.println("Pulando etapas de processamento e conversão...");
 
-          // Continuar com análise usando arquivo original
           performAnalysisOnly(fileId);
           return;
         }
@@ -316,7 +308,6 @@ public class AudioProcessingClient {
     }
   }
 
-  // Método separado para conversão
   private void performConversion(String fileId) {
     try {
       System.out.println("\n4. CONVERSÃO PARA MP3");
@@ -349,7 +340,6 @@ public class AudioProcessingClient {
     }
   }
 
-  // Método separado para análise
   private void performAnalysisOnly(String fileId) {
     try {
       System.out.println("\n5. ANÁLISE DO ÁUDIO");
@@ -415,7 +405,6 @@ public class AudioProcessingClient {
     }
   }
 
-  // Listar todos os arquivos
   public void listFiles() {
     try {
       if (isShutdown.get()) {
@@ -454,7 +443,6 @@ public class AudioProcessingClient {
 
       System.out.println("Testando conexão com servidores...");
 
-      // Teste servidor de processamento
       try {
         ListAudioFilesRequest request = ListAudioFilesRequest.newBuilder()
                 .setPage(1)
@@ -469,9 +457,7 @@ public class AudioProcessingClient {
         System.err.println("✗ Erro na conexão com servidor de processamento: " + e.getMessage());
       }
 
-      // Teste servidor de conversão
       try {
-        // Pode não ter um método de teste, então vamos apenas verificar se o canal está ativo
         if (!conversionChannel.isShutdown()) {
           System.out.println("✓ Canal de conversão está ativo (porta 50052)");
         }
@@ -479,9 +465,7 @@ public class AudioProcessingClient {
         System.err.println("✗ Erro no canal de conversão: " + e.getMessage());
       }
 
-      // Teste servidor de análise
       try {
-        // Pode não ter um método de teste, então vamos apenas verificar se o canal está ativo
         if (!analysisChannel.isShutdown()) {
           System.out.println("✓ Canal de análise está ativo (porta 50053)");
         }
@@ -495,18 +479,15 @@ public class AudioProcessingClient {
     }
   }
 
-  // Método para diagnóstico do servidor
   public void diagnoseServer() {
     try {
       System.out.println("\n=== DIAGNÓSTICO DO SERVIDOR ===");
 
-      // Verificar se os canais estão ativos
       System.out.println("Estado dos canais:");
       System.out.println("- Processing: " + (processingChannel.isShutdown() ? "DESLIGADO" : "ATIVO"));
       System.out.println("- Conversion: " + (conversionChannel.isShutdown() ? "DESLIGADO" : "ATIVO"));
       System.out.println("- Analysis: " + (analysisChannel.isShutdown() ? "DESLIGADO" : "ATIVO"));
 
-      // Listar arquivos para verificar se o servidor está funcionando
       System.out.println("\nTestando listagem de arquivos...");
       listFiles();
 
@@ -515,7 +496,52 @@ public class AudioProcessingClient {
     }
   }
 
+  // MÉTODO PRINCIPAL PARA SER CHAMADO POR OUTROS SCRIPTS
+  public static void processAudioFile(String audioFilePath) {
+    AudioProcessingClient client = new AudioProcessingClient(
+            "localhost", 50051, // Processing Server
+            "localhost", 50052, // Conversion Server
+            "localhost", 50053 // Analysis Server
+    );
+
+    try {
+      // Verificar se o arquivo existe
+      File testFile = new File(audioFilePath);
+      if (!testFile.exists()) {
+        System.err.println("Arquivo não encontrado: " + audioFilePath);
+        return;
+      }
+
+      System.out.println("Processando arquivo: " + audioFilePath + " (" + testFile.length() + " bytes)");
+
+      // Executar o workflow completo
+      client.processCompleteWorkflow(audioFilePath);
+
+      System.out.println("Processamento concluído com sucesso!");
+
+    } catch (Exception e) {
+      System.err.println("Erro ao processar arquivo: " + e.getMessage());
+      e.printStackTrace();
+    } finally {
+      try {
+        client.shutdown();
+      } catch (InterruptedException e) {
+        System.err.println("Erro ao fechar conexões: " + e.getMessage());
+        Thread.currentThread().interrupt();
+      }
+    }
+  }
+
+  // MÉTODO PRINCIPAL ORIGINAL (COMPATIBILIDADE)
   public static void main(String[] args) {
+    // Se foi passado um argumento, usa ele como arquivo
+    if (args.length > 0) {
+      String audioFilePath = args[0];
+      processAudioFile(audioFilePath);
+      return;
+    }
+
+    // Comportamento original para compatibilidade
     AudioProcessingClient client = new AudioProcessingClient(
             "localhost", 50051, // Processing Server
             "localhost", 50052, // Conversion Server
@@ -529,17 +555,17 @@ public class AudioProcessingClient {
       // Diagnóstico adicional
       client.diagnoseServer();
 
-      // Aguardar um pouco após teste de conectividade
       Thread.sleep(2000);
 
-      // Se chegou aqui, a conexão está OK
+      // Arquivo padrão se nenhum argumento foi passado
       String audioFilePath = "teste.wav";
 
       // Verificar se o arquivo existe
       File testFile = new File(audioFilePath);
       if (!testFile.exists()) {
         System.err.println("Arquivo não encontrado: " + audioFilePath);
-        System.err.println("Por favor, certifique-se de que o arquivo existe antes de executar o cliente.");
+        System.err.println("Para usar um arquivo específico, execute:");
+        System.err.println("java AudioProcessingClient <caminho_do_arquivo>");
         return;
       }
 
@@ -547,10 +573,8 @@ public class AudioProcessingClient {
 
       client.processCompleteWorkflow(audioFilePath);
 
-      // Aguardar antes de listar arquivos
       Thread.sleep(2000);
 
-      // Listar arquivos finais
       System.out.println("\n=== ARQUIVOS FINAIS ===");
       client.listFiles();
 

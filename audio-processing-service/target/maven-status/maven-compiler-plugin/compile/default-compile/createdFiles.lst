@@ -28,6 +28,7 @@ com\audioprocessing\grpc\AudioFeaturesResponse$Builder.class
 com\audioprocessing\grpc\EqualizerSettings$1.class
 com\audioprocessing\grpc\AudioConversionResponse$Builder.class
 com\audioprocessing\grpc\AudioUploadResponseOrBuilder.class
+com\audioprocessing\client\AudioProcessorCaller.class
 com\audioprocessing\grpc\BatchConversionRequest$1.class
 com\audioprocessing\grpc\AudioConversionRequest.class
 com\audioprocessing\grpc\AudioInfoRequest$1.class
